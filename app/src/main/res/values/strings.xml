@@ -1,0 +1,49 @@
+<resources>
+    <string name="app_name">Coin Catcher</string>
+
+    <string name="onboard0_welcome">Welcome to Coin Catcher !</string>
+    <string name="onboard0_welcome_title">Catch every coin, master your budget</string>
+    <string name="onboard0_welcome_message">Coin Catcher helps you track your spending, set smart goals, and start saving effortlessly</string>
+    <string name="onboard0_button_text">Let\'s go</string>
+
+
+    <string name="onboard1_title">What Coin Catcher Helps You Do</string>
+    <string name="onboard1_feature1">Set monthly budgets that keep your spending in check</string>
+    <string name="onboard1_feature2">Log your expenses and income in just a few taps</string>
+    <string name="onboard1_feature3">Track your spending b y category — no surprises!</string>
+    <string name="onboard1_feature4">Visual insights show where your money really goes</string>
+    <string name="onboard1_button">Next</string>
+
+
+    <string name="onboard2_message">You\'re all set to take control of your finances. Let the fun begin. Catch, collect, conquer!</string>
+    <string name="onboard2_button">Get Started</string>
+
+
+    <string name="home_balance_title">Monthly Budget </string>
+
+
+    <string name="setting_title">Settings</string>
+    <string name="setting_budget_title">Monthly Budget</string>
+    <string name="edit_title">Edit transaction</string>
+    <string name="title_hint">Title</string>
+    <string name="amount_hint">Amount</string>
+    <string name="income_hint">Income</string>
+    <string name="expense_hint">Expense</string>
+    <string name="date_hint">Date</string>
+    <string name="app_title_name">Coin Catcher</string>
+    <string name="home_summary">Summary</string>
+    <string name="home_this_month">This Month</string>
+    <string name="income_home">Income</string>
+    <string name="home_expense">Expenses</string>
+    <string name="home_balance">Balance</string>
+    <string name="setting_currnecy">Currency</string>
+    <string name="setting_restore">Backup and Restore</string>
+    <string name="setting_set">Set</string>
+    <string name="backup_setting">Backup Data</string>
+    <string name="restore_setting">Restore Data</string>
+    <string name="summary_ti">Summary of Spendings</string>
+    <string name="add_transaction_title">Add transaction</string>
+    <string name="list_transaction_title">Transactions</string>
+
+
+</resources>

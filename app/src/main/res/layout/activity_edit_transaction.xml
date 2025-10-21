@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <!-- Form inside a CardView -->
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:background="@color/purple">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageView10"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="12dp"
+                card_view:layout_constraintStart_toStartOf="parent"
+                card_view:layout_constraintTop_toTopOf="parent"
+                card_view:srcCompat="@drawable/edi" />
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="72dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/edit_title"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                card_view:layout_constraintStart_toStartOf="parent"
+                card_view:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="16dp"
+        android:background="@android:color/white"
+        card_view:cardCornerRadius="6dp"
+        card_view:cardElevation="6dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <EditText
+                android:id="@+id/editTitle"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="@dimen/margin_input"
+                android:layout_marginBottom="@dimen/margin_input"
+                android:background="@drawable/edit_text_underline"
+                android:hint="@string/title_hint"
+                android:paddingLeft="10dp" />
+
+            <EditText
+                android:id="@+id/editAmount"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="@dimen/margin_input"
+                android:background="@drawable/edit_text_underline"
+                android:hint="@string/amount_hint"
+                android:inputType="numberDecimal"
+                android:paddingLeft="10dp" />
+
+            <Spinner
+                android:id="@+id/editCategory"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="@dimen/margin_input"
+                android:background="@drawable/spinner_underline"
+                android:backgroundTint="@color/blue" />
+
+            <TextView
+                android:id="@+id/spinnerErrorText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/holo_red_dark"
+                android:visibility="gone" />
+
+            <RadioGroup
+                android:id="@+id/editTypeGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_input"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/radioIncome"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="#009688"
+                    android:text="@string/income_hint"
+                    android:textColor="#009688"
+                    android:textSize="18sp" />
+
+                <RadioButton
+                    android:id="@+id/radioExpense"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="#F44336"
+                    android:text="@string/expense_hint"
+                    android:textColor="#F44336"
+                    android:textSize="18sp" />
+            </RadioGroup>
+
+            <EditText
+                android:id="@+id/editDate"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="@dimen/margin_input"
+                android:background="@drawable/edit_text_underline"
+                android:clickable="true"
+                android:focusable="false"
+                android:hint="@string/date_hint"
+                android:paddingLeft="10dp" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Update and Cancel Buttons side by side -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="130dp"
+        android:gravity="end"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/buttonUpdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/purple"
+            android:text="Update"
+            card_view:cornerRadius="6dp" />
+
+        <Button
+            android:id="@+id/buttonCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:backgroundTint="#9E9E9E"
+            android:text="Cancel"
+            card_view:cornerRadius="6dp" />
+    </LinearLayout>
+
+    <!-- Bottom Navigation -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView10"
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="8dp"
+        card_view:cardCornerRadius="16dp"
+        tools:layout_marginBottom="10dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/purple">
+
+            <ImageButton
+                android:id="@+id/settingsButton"
+                android:layout_width="55dp"
+                android:layout_height="54dp"
+                android:layout_marginBottom="11dp"
+                android:backgroundTint="@color/purple"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/btnViewSummary"
+                app:layout_constraintTop_toTopOf="@+id/btnViewSummary"
+                app:srcCompat="@drawable/setti" />
+
+            <ImageButton
+                android:id="@+id/btnViewSummary"
+                android:layout_width="64dp"
+                android:layout_height="53dp"
+                android:layout_marginBottom="12dp"
+                android:backgroundTint="@color/purple"
+                android:scaleType="fitXY"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/settingsButton"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/viewTransaction"
+                app:layout_constraintTop_toTopOf="@+id/viewTransaction"
+                app:srcCompat="@drawable/graph" />
+
+            <ImageButton
+                android:id="@+id/viewTransaction"
+                android:layout_width="65dp"
+                android:layout_height="58dp"
+                android:layout_marginBottom="7dp"
+                android:backgroundTint="@color/purple"
+                android:scaleType="fitXY"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/btnViewSummary"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/btnHome"
+                app:layout_constraintTop_toTopOf="@+id/btnHome"
+                app:srcCompat="@drawable/tran" />
+
+            <ImageButton
+                android:id="@+id/btnHome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="13dp"
+                android:backgroundTint="@color/purple"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/viewTransaction"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:srcCompat="@drawable/ho" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

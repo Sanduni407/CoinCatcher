@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="category_array">
+        <item>Select Category</item>
+        <item>Food and Groceries</item>
+        <item>Transportation</item>
+        <item>Shopping</item>
+        <item>Utilities</item>
+        <item>Entertainment</item>
+        <item>Health</item>
+        <item>Salary</item>
+        <item>Other Income</item>
+        <item>Other</item>
+    </string-array>
+</resources>
